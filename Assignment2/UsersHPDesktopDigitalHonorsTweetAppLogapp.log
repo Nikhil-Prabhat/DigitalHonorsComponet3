@@ -1,0 +1,26 @@
+2022-03-24 00:07:02.990  INFO 12772 --- [restartedMain] com.tweetapp.Assignment2Application      : Starting Assignment2Application using Java 11.0.12 on LAPTOP-0G1LEEOR with PID 12772 (C:\Users\HP\eclipse-workspace\Assignment2\target\classes started by HP in C:\Users\HP\eclipse-workspace\Assignment2)
+2022-03-24 00:07:02.990 DEBUG 12772 --- [restartedMain] com.tweetapp.Assignment2Application      : Running with Spring Boot v2.6.4, Spring v5.3.16
+2022-03-24 00:07:02.990  INFO 12772 --- [restartedMain] com.tweetapp.Assignment2Application      : No active profile set, falling back to 1 default profile: "default"
+2022-03-24 00:07:03.178  INFO 12772 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+2022-03-24 00:07:03.188  INFO 12772 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 9 ms. Found 2 MongoDB repository interfaces.
+2022-03-24 00:07:03.234  INFO 12772 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-03-24 00:07:03.235  INFO 12772 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-03-24 00:07:03.235  INFO 12772 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.58]
+2022-03-24 00:07:03.247  INFO 12772 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-03-24 00:07:03.248  INFO 12772 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 254 ms
+2022-03-24 00:07:03.261  INFO 12772 --- [restartedMain] org.mongodb.driver.cluster               : Cluster created with settings {hosts=[localhost:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms'}
+2022-03-24 00:07:03.264  INFO 12772 --- [cluster-ClusterId{value='623b68cf962e524bac821263', description='null'}-localhost:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:4, serverValue:224}] to localhost:27017
+2022-03-24 00:07:03.264  INFO 12772 --- [cluster-rtt-ClusterId{value='623b68cf962e524bac821263', description='null'}-localhost:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:5, serverValue:225}] to localhost:27017
+2022-03-24 00:07:03.268  INFO 12772 --- [cluster-ClusterId{value='623b68cf962e524bac821263', description='null'}-localhost:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=13, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=1154400}
+2022-03-24 00:07:03.278  INFO 12772 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-03-24 00:07:03.355  INFO 12772 --- [restartedMain] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2022-03-24 00:07:03.401  INFO 12772 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-03-24 00:07:03.401  INFO 12772 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2022-03-24 00:07:03.402  INFO 12772 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2022-03-24 00:07:03.405  INFO 12772 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2022-03-24 00:07:03.426  INFO 12772 --- [restartedMain] com.tweetapp.Assignment2Application      : Started Assignment2Application in 0.466 seconds (JVM running for 139.751)
+2022-03-24 00:07:03.427  INFO 12772 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2022-03-24 00:07:10.874  INFO 12772 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-03-24 00:07:17.159 DEBUG 12772 --- [http-nio-8080-exec-8] com.tweetapp.controller.TweetController  : Request getAllTweets : {}
+2022-03-24 00:07:17.163  INFO 12772 --- [http-nio-8080-exec-8] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:6, serverValue:226}] to localhost:27017
+2022-03-24 00:07:17.174 DEBUG 12772 --- [http-nio-8080-exec-8] com.tweetapp.controller.TweetController  : Response getAllTweets : [TweetDetails(username=Nikhil, tweets=[Tweet(tweet=Hey Nikk !!, isLiked=true, repliedTweets=[I liked you tweet, What a cool dude !!, Swxy Nik]), Tweet(tweet=You are so sweet !!, isLiked=false, repliedTweets=null)]), TweetDetails(username=Pushpam, tweets=[])]
