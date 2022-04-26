@@ -9,7 +9,7 @@ import org.springframework.stereotype.Service;
 @Service
 public class TweetAppSQSServiceImpl implements TweetAppSQSService {
 	
-	private static final String ENDPOINT = "https://sqs.us-east-1.amazonaws.com/564790788513/NikhilQueue";
+	private static final String ENDPOINT = "https://sqs.us-east-1.amazonaws.com/322051395254/TweetAppQueue";
 	
 	@Autowired
 	private QueueMessagingTemplate queueMessagingTemplate;
