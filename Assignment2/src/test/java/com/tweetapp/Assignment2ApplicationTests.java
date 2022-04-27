@@ -8,6 +8,8 @@ class Assignment2ApplicationTests {
 
 	@Test
 	void contextLoads() {
+		
+		Assignment2Application.main(new String[] {});
 	}
 
 }
