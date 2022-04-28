@@ -1,0 +1,108 @@
+ 
+AWS DynamoDB - NoSQL Database
+
+Access Key Id : AKIAYHABHQGQZBNRH7DO
+Secret Access Key : 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
+
+Updated 
+
+Access Key Id : AKIAUV66CJ23ISIP72PQ
+Secret Access Key : 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
+
+
+/*    Custom Policy  */
+
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Action":   [ "dynamodb:PutItem" ],
+      "Resource": [ "*" ]
+    },
+    {
+      "Effect": "Allow",
+      "Action":   [ "sns:Publish" ],
+      "Resource": [ "*" ]
+    }
+  ]
+}
+
+/* DynamoDB Dependency  */
+
+<dependency>
+	<groupId>com.amazonaws</groupId>
+	<artifactId>aws-java-sdk-dynamodb</artifactId>
+	<version>1.11.815</version>
+</dependency>
+
+/* Annotations */
+
+@DynamoDBDocument 	- 	Indicates that a class can be serialized as an Amazon DynamoDB document.
+@DynamoDBAttribute 	- 	Maps a property to a table attribute. By default, each class property maps to an item attribute with the same name. 
+						However, if the names are not the same, you can use this annotation to map a property to the attribute.
+@DynamoDBHashKey	-   Maps a class property to the partition key of the table. The property must be one of the scalar string, number, or binary types. 
+						The property can't be a collection type.
+@Primary			-	It indicates that a bean should be given preference when multiple candidates are qualified to autowire a single-valued dependency.
+						
+						
+Simple Queue Service (SQS) - Analogus to Active MQ, Rabbit MQ and Kafka
+
+Producer produces the messages and send it to Amazon SQS, it is then transferred to SQS Queue and the consumer can consume from there.
+
+https://sqs.us-east-1.amazonaws.com/564790788513/NikhilQueue
+updated  : https://sqs.us-east-1.amazonaws.com/322051395254/TweetAppQueue
+
+Elastic BeanStalk url : http://component3-env.eba-bj76pvqh.us-east-1.elasticbeanstalk.com/
+S3 Bucket URL		  : http://component3-ui.s3-website-us-east-1.amazonaws.com/
+
+To generate build files from angular : ng build --prod
+
+AWS S3 Bucket Policy ::: (Just change the bucket name)
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "PublicReadGetObject",
+            "Effect": "Allow",
+            "Principal": "*",
+            "Action": "s3:GetObject",
+            "Resource": "arn:aws:s3:::cryptokonit.com/*" // write your bucket arn here
+        }
+    ]
+}
+
+--
+
+Mixed Content: The page at 'https://b-ngcode.s3.amazonaws.com/signup' was loaded over HTTPS, but requested an insecure XMLHttpRequest endpoint 'http://b-env.eba-km5mjgp2.us-east-1.elasticbeanstalk.com/api/v1.0/tweets/register'. This request has been blocked; the content must be served over HTTPS.
+
+Mixed Content: The page at 'https ' was loaded over HTTPS, but requested an insecure XMLHttpRequest endpoint”
+
+Access to XMLHttpRequest at 'http://b-env.eba-km5mjgp2.us-east-1.elasticbeanstalk.com/api/v1.0/tweets/register' from origin 'http://b-ngcode.s3-website-us-east-1.amazonaws.com' has been blocked by CORS policy: Response to preflight request doesn't pass access control check: No 'Access-Control-Allow-Origin' header is present on the requested resource.
+
+** The error is mainly due to the fact because the cross origin in sts was localhost and call was being made from aws s3 bucket
+
+------------- CI/CD  ---------------------------------------
+
+Buildspec.yml
+
+version: 0.2
+
+phases:
+  build:
+    commands:
+      - echo Entered the build phase...
+      - mvn clean package
+  post_build:
+    commands:
+      - echo Build completed successfully
+artifacts:
+  files:
+    - target/order-service.jar
+  discard-paths: yes
+  
+  
+----------------- Lambda --------------------------------
+
+** Lambda Dependency
+
